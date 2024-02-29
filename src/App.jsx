@@ -3,7 +3,6 @@ import NoProject from "./components/NoProject";
 import AddProject from "./components/AddProject";
 import Project from "./components/Project";
 import { useState } from "react";
-import getProject from "./assets/Utils";
 
 function App() {
   const [projectsState, setProjectsState] = useState({
@@ -102,6 +101,7 @@ function App() {
       <main className="flex gap-8">
         <SideBar
           title="Your projects"
+          selectedId={projectsState.selectedProjectId}
           projects={projectsState.projects}
           onSelectProject={handleSelectedProject}
           onAddProject={handleAddProjectDisplay}

@@ -19,7 +19,7 @@ export default function Task({ onAdd }) {
   return (
     <div className="flex items-center gap-4">
       <input
-        className="w-64 px-2 py-1 rounded-sm bg-stone-600"
+        className="w-64 px-2 py-1 rounded-sm bg-stone-200"
         onChange={handleChange}
         value={enteredTask}
       />

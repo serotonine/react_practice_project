@@ -1,5 +1,6 @@
 export default function SideBar({
   title,
+  selectedId,
   projects,
   onSelectProject,
   onAddProject,
@@ -23,10 +24,14 @@ export default function SideBar({
       </header>
       <main className="w-3/4">
         {projects.map((project) => {
+          const classes =
+            project.id === selectedId
+              ? "text-white mb-4"
+              : "text-slate-200 cursor-pointer hover:text-white hover:underline mb-4";
           return (
             <p
               key={project.id}
-              className="text-slate-200 cursor-pointer hover:text-white hover:underline mb-4"
+              className={classes}
               onClick={() => handleClick(project.id)}
             >
               {project.title}
