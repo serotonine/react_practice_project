@@ -1,10 +1,7 @@
-import Button from "./Button";
 import Task from "./Task";
-import { useState } from "react";
 export default function Tasks({ tasks, onAddTask, onDeleteTask }) {
   function addTask(task) {
     // Trigger Project.
-    console.log("Tasks =>", task);
     onAddTask(task);
   }
   function deleteTask(id) {
